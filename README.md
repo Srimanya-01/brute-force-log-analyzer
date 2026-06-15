@@ -1,0 +1,16 @@
+# Automated Incident Response: Brute-Force Log Analyzer
+A defensive cybersecurity script designed to parse server authentication logs, calculate login failure frequencies, and generate automated security alerts for Security Operations Centre (SOC) teams.
+
+## Objective
+To automate threat detection workflows by identifying malicious reconnaissance and unauthorized brute-force guessing patterns inside corporate access logs.
+
+## Features
+- Parses complex unstructured server string logs into key metrics (IP, Timestamp, Status).
+- Implements a localized state table to aggregate risk metrics per unique host.
+- Generates immediate, conditional security alert flags when risk thresholds are exceeded.
+
+## Incident Remediation Advice
+The script successfully flagged IP `192.168.1.50` with high-risk behavior.
+**Remediation Steps:**
+1. Configure the enterprise firewall or router access control list (ACL) to block all incoming traffic from the malicious IP immediately.
+2. Implement an Account Lockout Policy that freezes user accounts automatically after 3 incorrect password attempts to completely neutralize automated guessing tools.
