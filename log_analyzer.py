@@ -1,8 +1,7 @@
 import sys
 from datetime import datetime
 
-# Simulated server logs (In a real system, this would read a live text file)
-# 'FAIL' means a bad password was entered. 'SUCCESS' means a correct login.
+# Simulated server logs
 server_logs = [
     "2026-06-15 10:01:00 - IP: 192.168.1.50 - Status: FAIL - User: admin",
     "2026-06-15 10:01:05 - IP: 192.168.1.50 - Status: FAIL - User: root",
@@ -26,7 +25,10 @@ for entry in server_logs:
     if "Status: FAIL" in entry:
         # Split the string to extract the IP address cleanly
         parts = entry.split(" - ")
-        ip_address = parts[1].replace("IP: ", "")
+        
+        # FIXED: We look inside the second element of the list (index 1) to find the IP
+        ip_string = parts[1] 
+        ip_address = ip_string.replace("IP: ", "")
         
         # Increment the failure counter for this specific IP
         failed_attempts[ip_address] = failed_attempts.get(ip_address, 0) + 1
