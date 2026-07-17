@@ -1,5 +1,6 @@
-# Automated Incident Response: Brute-Force Log Analyzer
-A defensive cybersecurity script designed to parse server authentication logs, calculate login failure frequencies, and generate automated security alerts for Security Operations Centre (SOC) teams.
+# Brute-Force Log Analyzer
+
+A Python-based security tool that analyzes authentication logs to detect potential brute-force attacks by identifying repeated failed login attempts from the same IP address.
 
 ## Objective
 To automate threat detection workflows by identifying malicious reconnaissance and unauthorized brute-force guessing patterns inside corporate access logs.
