@@ -32,3 +32,5 @@ cd brute-force-log-analyzer
 ### 3. Run the program
 
 ```bash
+python log_analyzer.py
+```
