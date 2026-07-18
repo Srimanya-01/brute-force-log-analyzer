@@ -33,8 +33,5 @@ cd brute-force-log-analyzer
 
 ```bash
 
-<img width="842" height="192" alt="output" src="https://github.com/user-attachments/assets/89ac74ea-6661-4d5a-9697-4dcaff2dd3cc" />
-
-
 python log_analyzer.py
 ```
