@@ -32,8 +32,3 @@ cd brute-force-log-analyzer
 ### 3. Run the program
 
 ```bash
-## Sample Output
-
-![Program Output](screenshots/output.png)
-python log_analyzer.py
-```
