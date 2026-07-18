@@ -1,16 +1,9 @@
-import sys
 from datetime import datetime
 
-# Simulated server logs
-server_logs = [
-    "2026-06-15 10:01:00 - IP: 192.168.1.50 - Status: FAIL - User: admin",
-    "2026-06-15 10:01:05 - IP: 192.168.1.50 - Status: FAIL - User: root",
-    "2026-06-15 10:01:10 - IP: 192.168.1.50 - Status: FAIL - User: backup",
-    "2026-06-15 10:01:15 - IP: 192.168.1.50 - Status: FAIL - User: guest",
-    "2026-06-15 10:02:00 - IP: 10.0.0.12 - Status: SUCCESS - User: srimanya",
-    "2026-06-15 10:03:22 - IP: 192.168.1.50 - Status: FAIL - User: mysql",
-    "2026-06-15 10:04:00 - IP: 172.16.5.99 - Status: FAIL - User: user1"
-]
+# Read server logs from a text file
+with open("sample_logs.txt", "r") as file:
+    server_logs = file.readlines()
+
 
 # Set the threshold for triggering an alert (e.g., more than 3 failures)
 FAILED_THRESHOLD = 3
