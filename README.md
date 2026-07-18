@@ -15,3 +15,22 @@ The script successfully flagged IP `192.168.1.50` with high-risk behavior.
 **Remediation Steps:**
 1. Configure the enterprise firewall or router access control list (ACL) to block all incoming traffic from the malicious IP immediately.
 2. Implement an Account Lockout Policy that freezes user accounts automatically after 3 incorrect password attempts to completely neutralize automated guessing tools.
+## How to Run
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Srimanya-01/brute-force-log-analyzer.git
+```
+
+### 2. Navigate to the project folder
+
+```bash
+cd brute-force-log-analyzer
+```
+
+### 3. Run the program
+
+```bash
+python log_analyzer.py
+```
